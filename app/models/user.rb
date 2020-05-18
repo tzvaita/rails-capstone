@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :following, through: :active_followings, source: :followed
   has_many :followers, through: :passive_relationships
+  has_many :thoughts, foreign_key: 'author_id'
 
   # Follows a user.
   def follow(other_user)
