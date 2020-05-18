@@ -11,5 +11,6 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+  resources :followings,       only: [:create, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
