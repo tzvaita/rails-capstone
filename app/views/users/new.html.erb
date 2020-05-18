@@ -1,2 +1,8 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= form_with(model: @user, local: true) do |f| %>
+  <%= f.label :fullname %>
+  <%= f.text_field :fullname %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.submit 'Create my account' %>
