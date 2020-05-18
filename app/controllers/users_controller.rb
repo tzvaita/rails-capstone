@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   # show all users
   def index
+    @users = User.all
   end
 
   # show a single user
   def show
+    @user = User.find(params[:id])
   end
 
   # new user instance
