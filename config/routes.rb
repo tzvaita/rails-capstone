@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get     '/signup',   to: 'users#new'
   root    'sessions#new'
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
