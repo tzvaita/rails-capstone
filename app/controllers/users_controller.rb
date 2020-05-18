@@ -18,8 +18,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      flash[:success] = "Welcome to the App!"
       redirect_to @user
     else
+      flash[:errors] = @user.errors.full_messages
       render 'new'
     end
   end
