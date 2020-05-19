@@ -1,6 +1,6 @@
 # Thoughts app with Ruby on Rails
 
-This is the repository for the ruby on rails capstone project for microverse curriculum. The application was published on Heroku: [link](https://still-taiga-44791.herokuapp.com)
+This is the repository for the ruby on rails capstone project for microverse curriculum. The application was published on Heroku: [link](https://git.heroku.com/damp-lake-87370.git)
 
 ## Built With
 
@@ -9,8 +9,7 @@ This is the repository for the ruby on rails capstone project for microverse cur
 
 ## Live Demo
 
-https://still-taiga-44791.herokuapp.com
-
+https://git.heroku.com/damp-lake-87370.git
 
 ## Getting Started
 
