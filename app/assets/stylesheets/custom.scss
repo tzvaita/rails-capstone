@@ -16,6 +16,14 @@
   }
 }
 
-.avatarimage {
-  width: 50px;
+body{
+  overflow-x:hidden;
+}
+
+html,body {
+  height: 100%;
+}
+
+.myfix {
+  height: 100%
 }

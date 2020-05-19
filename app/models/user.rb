@@ -12,6 +12,10 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships
   has_many :thoughts, foreign_key: 'author_id'
 
+  validates :username, presence: true, length: { maximum: 50 }
+  validates :fullname, presence: true, length: { maximum: 50 }
+
+
   # Follows a user.
   def follow(other_user)
     following << other_user

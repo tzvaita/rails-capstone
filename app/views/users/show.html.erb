@@ -1,29 +1,41 @@
-<div class="row">
-  <div class="col-lg-3 bg-warning">
+<div class="row-fluid">
+  <div class="col-lg-3 bg-warning myfix">
     <%= render 'shared/aside' %>
   </div>
   <div class="col-lg-6 bg-info">
     <div class="container">
-    <% if @user.coverimage? %>
-      <%= image_tag @user.coverimage_url.to_s %>
+      <% if @user.coverimage? %>
+        <%= image_tag @user.coverimage_url.to_s %>
       <% else %>
-    <%= image_tag("248.jpeg", alt: "Rails logo", width: "600", height: "150") %>
-    <% end %>
+        <%= image_tag("248.jpeg", alt: "Rails logo", width: "600", height: "150") %>
+      <% end %>
     </div>
     <h2>User thoughts</h2>
     <% @thoughts.each do |thot| %>
-      <p><%= thot.author.fullname %> wrote: </p>
-      <p><%= thot.text %></p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <h3>
+              <%= avatar_for @user %>
+              <%= @user.fullname %>
+            </h3>
+          </div>
+          <div class="col-lg-10">
+            <p><%= thot.author.fullname %> wrote: </p>
+            <p><%= thot.text %></p>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
   <div class="col-lg-3 bg-danger">
     <h2>user photo here</h2>
     <div>
-    <% if @user.photo? %>
-      <%= image_tag @user.photo_url(:thumb).to_s %>
+      <% if @user.photo? %>
+        <%= image_tag @user.photo_url(:thumb).to_s %>
       <% else %>
-    <%= image_tag("avatar.png", alt: "Rails logo", width: "50") %>
-    <% end %>
+        <%= image_tag("avatar.png", alt: "Rails logo", width: "50") %>
+      <% end %>
     </div>
     <div>
       <%= link_to 'Edit profile',edit_user_path %>
@@ -32,20 +44,29 @@
       <%= render 'shared/stats' %>
     </section>
     <div>
-    <% if logged_in? %>
-      <%= render 'followform' %>
+      <% if logged_in? %>
+        <%= render 'followform' %>
       <% else %>
         <h2>Logged in as: <%= @user.name if current_user %> </h2>
       <% end %>
     </div>
-    <h2>Followed by:</h2>
-    <% if @followers.any? %>
-      <% @followers.each do |follower| %>
-        <p><%= follower.fullname %></p>
-      <% end %>
+    <div class="container">
+      <h2>Followed by:</h2>
+      <% if @followers.any? %>
+        <% @followers.each do |follower| %>
+        <div class="row">
+          <div class="col-lg-1">
+            <%= avatar_for(follower)%>
+          </div>
+          <div class="col-lg-11">
+            <p><%= follower.fullname %></p>
+          </div>
+        </div>
+        <% end %>
       <% else %>
-      <p>No followers yet!</p>
+        <p>No followers yet!</p>
       <% end %>
+    </div>
   </div>
 </div>
 

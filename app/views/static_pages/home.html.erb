@@ -7,6 +7,9 @@
       <%= render 'shared/thought_form'%>
 
       <% @thoughts.each do |thot| %>
+        <h1>
+          <%= avatar_for thot.author %>
+        </h1>
         <p><%= thot.author.username %> wrote: </p>
         <p class="text-white"><%= thot.text %></p>
       <% end %>
@@ -16,7 +19,10 @@
     
       <% @users.each do |user| %>
           <% if user != current_user && !following?(user) %>
-            <p><%= user.fullname %></p> 
+            <h1>
+              <%= avatar_for user %>
+              <%= user.fullname %>
+            </h1>
           <% end %>
       <% end %>
     </div>

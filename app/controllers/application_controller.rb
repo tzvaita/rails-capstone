@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
-
+  
   private
 
   # Confirms a logged-in user.
