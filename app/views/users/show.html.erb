@@ -46,7 +46,7 @@
       <% if logged_in? %>
         <%= render 'followform' %>
       <% else %>
-        <h2>Logged in as: <%= @user.name if current_user %> </h2>
+        <h2>You are not logged in </h2>
       <% end %>
     </div>
     <div class="container">

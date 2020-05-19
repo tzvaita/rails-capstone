@@ -4,7 +4,7 @@
       <%= avatar_for(user)%>
     </div>
     <div class="col-lg-11">
-      <p><%= user.fullname %></p>
+      <p><%=link_to user.fullname, user %></p>
     </div>
   </div>
 
