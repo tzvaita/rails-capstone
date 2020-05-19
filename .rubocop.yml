@@ -57,8 +57,3 @@ Style:
 
 Lint:
   Enabled: false
-
-
-
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
