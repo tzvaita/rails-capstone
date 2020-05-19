@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
+  mount_uploader :coverimage, CoverimageUploader
   has_many :active_followings, class_name:  'Following',
                                   foreign_key: 'follower_id',
                                   dependent:   :destroy

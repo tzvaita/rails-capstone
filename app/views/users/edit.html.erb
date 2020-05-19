@@ -6,8 +6,12 @@
 
       <%= f.label :fullname %>
       <%= f.text_field :fullname, class: 'form-control' %>
+
       <%= f.label :photo %>
       <%= f.file_field :photo %>
+
+      <%= f.label :coverimage %>
+      <%= f.file_field :coverimage %>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>

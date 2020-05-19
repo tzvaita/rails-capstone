@@ -3,7 +3,13 @@
     <%= render 'shared/aside' %>
   </div>
   <div class="col-lg-6 bg-info">
-    <h1>cover picture here</h1>
+    <div class="container">
+    <% if @user.coverimage? %>
+      <%= image_tag @user.coverimage_url.to_s %>
+      <% else %>
+    <%= image_tag("248.jpeg", alt: "Rails logo", width: "600", height: "150") %>
+    <% end %>
+    </div>
     <h2>User thoughts</h2>
     <% @thoughts.each do |thot| %>
       <p><%= thot.author.fullname %> wrote: </p>
