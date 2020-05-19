@@ -36,6 +36,12 @@ gem 'rmagick'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+   # The RSpec testing framework
+   gem 'rspec-rails'
+   
+   # The following gems aids with the nuts and bolts
+   # of interacting with the browser.
+   gem 'webdrivers'
 end
 
 group :development do
