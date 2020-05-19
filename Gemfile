@@ -31,6 +31,7 @@ gem 'bootstrap-sass', '3.4.1'
 
 # carrierwave for file uploads
 gem 'carrierwave'
+gem 'rmagick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

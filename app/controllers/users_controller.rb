@@ -29,6 +29,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
   def following
     @title = "Following"
     @user  = User.find(params[:id])
@@ -47,6 +61,6 @@ class UsersController < ApplicationController
   
   # allowed params
     def user_params
-      params.require(:user).permit(:fullname, :username)
+      params.require(:user).permit(:fullname, :username, :photo)
     end
 end

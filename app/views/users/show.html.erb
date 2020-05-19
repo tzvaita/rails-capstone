@@ -12,11 +12,25 @@
   </div>
   <div class="col-lg-3 bg-danger">
     <h2>user photo here</h2>
+    <div>
+    <% if @user.photo? %>
+      <%= image_tag @user.photo_url(:thumb).to_s %>
+      <% else %>
+    <%= image_tag("avatar.png", alt: "Rails logo", width: "50") %>
+    <% end %>
+    </div>
+    <div>
+      <%= link_to 'Edit profile',edit_user_path %>
+    </div>
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
     <div>
-      <%= render 'followform' if logged_in? %>
+    <% if logged_in? %>
+      <%= render 'followform' %>
+      <% else %>
+        <h2>Logged in as: <%= @user.name if current_user %> </h2>
+      <% end %>
     </div>
     <h2>Followed by:</h2>
     <% if @followers.any? %>
