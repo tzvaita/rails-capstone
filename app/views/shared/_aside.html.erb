@@ -1,2 +1,4 @@
-<p><%= link_to 'All users', users_path %></p>
-<p><%= link_to 'My profile', current_user %></p>
+<p><%= link_to 'Home', root_path, class: "btn btn-success"  %></p>
+<p><%= link_to 'All users', users_path, class: "btn btn-success"  %></p>
+<p><%= link_to 'My profile', current_user, class: "btn btn-success"  %></p>
+<p><%= link_to 'Logout', logout_path, method: :delete, class: "btn btn-success" %></p>

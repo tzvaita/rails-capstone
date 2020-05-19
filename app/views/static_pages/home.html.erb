@@ -3,7 +3,7 @@
       <%= render 'shared/aside' %>
     </div>
     <div class="col-lg-6 bg-info">
-      <h1> Thoughts </h1>
+      <h1 class="topics"> Thoughts </h1>
       <%= render 'shared/thought_form'%>
 
       <% @thoughts.each do |thot| %>
@@ -14,15 +14,15 @@
         <p class="text-white"><%= thot.text %></p>
       <% end %>
     </div>
-    <div class="col-lg-3 bg-danger">
-    <h2>Who to follow</h2>
+    <div class="col-lg-3 show3">
+    <h2 class="topics">Who to follow</h2>
     
       <% @users.each do |user| %>
           <% if user != current_user && !following?(user) %>
-            <h1>
+            <h3>
               <%= avatar_for user %>
-              <%= user.fullname %>
-            </h1>
+              <%=link_to user.fullname, user %>
+            </h3>
           <% end %>
       <% end %>
     </div>

@@ -1,5 +1,5 @@
-<div class="row-fluid">
-  <div class="col-lg-3 bg-warning myfix">
+<div class="row-fluid h-100">
+  <div class="col-lg-3 bg-warning">
     <%= render 'shared/aside' %>
   </div>
   <div class="col-lg-6 bg-info">
@@ -14,7 +14,7 @@
     <% @thoughts.each do |thot| %>
       <div class="container">
         <div class="row">
-          <div class="col-lg-2">
+          <div class="col-2">
             <h3>
               <%= avatar_for @user %>
               <%= @user.fullname %>
@@ -28,8 +28,7 @@
       </div>
     <% end %>
   </div>
-  <div class="col-lg-3 bg-danger">
-    <h2>user photo here</h2>
+  <div class="col-lg-3 show3">
     <div>
       <% if @user.photo? %>
         <%= image_tag @user.photo_url(:thumb).to_s %>
@@ -38,7 +37,7 @@
       <% end %>
     </div>
     <div>
-      <%= link_to 'Edit profile',edit_user_path %>
+      <%= link_to 'Edit profile',edit_user_path, class: "btn btn-success" if @user == current_user%>
     </div>
     <section class="stats">
       <%= render 'shared/stats' %>
@@ -69,5 +68,3 @@
     </div>
   </div>
 </div>
-
-<%= link_to 'logout', logout_path, method: :delete %>
