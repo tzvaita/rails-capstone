@@ -1,14 +1,24 @@
   <div class="row">
     <div class="col-lg-3 bg-warning">
-      <p><%= link_to 'All users' %></p>
-      <p><%= link_to 'My profile' %></p>
+      <%= render 'shared/aside' %>
     </div>
     <div class="col-lg-6 bg-info">
       <h1> Thoughts </h1>
-      
+      <%= render 'shared/thought_form'%>
+
+      <% @thoughts.each do |thot| %>
+        <p><%= thot.author.username %> wrote: </p>
+        <p class="text-white"><%= thot.text %></p>
+      <% end %>
     </div>
     <div class="col-lg-3 bg-danger">
-    <p>fergf</p>
+    <h2>Who to follow</h2>
+    
+      <% @users.each do |user| %>
+          <% if user != current_user && !following?(user) %>
+            <p><%= user.fullname %></p> 
+          <% end %>
+      <% end %>
     </div>
   </div>
 </div>

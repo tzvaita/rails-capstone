@@ -1,0 +1,6 @@
+<%= form_with(model: @thought, local: true) do |f| %>
+  <div class="field">
+    <%= f.text_area :text, placeholder: "Compose new thought..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

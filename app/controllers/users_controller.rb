@@ -7,6 +7,8 @@ class UsersController < ApplicationController
   # show a single user
   def show
     @user = User.find(params[:id])
+    @thoughts = @user.thoughts.order(created_at: :desc)
+    @followers = @user.followers
   end
 
   # new user instance
@@ -30,14 +32,14 @@ class UsersController < ApplicationController
   def following
     @title = "Following"
     @user  = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page])
+    @users = @user.following
     render 'show_follow'
   end
 
   def followers
     @title = "Followers"
     @user  = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers
     render 'show_follow'
   end
 

@@ -1,11 +1,31 @@
 <div class="row">
-  <aside class="col-md-4">
+  <div class="col-lg-3 bg-warning">
+    <%= render 'shared/aside' %>
+  </div>
+  <div class="col-lg-6 bg-info">
+    <h1>cover picture here</h1>
+    <h2>User thoughts</h2>
+    <% @thoughts.each do |thot| %>
+      <p><%= thot.author.fullname %> wrote: </p>
+      <p><%= thot.text %></p>
+    <% end %>
+  </div>
+  <div class="col-lg-3 bg-danger">
+    <h2>user photo here</h2>
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
-  </aside>
-  <div class="col-md-8">
-    <%= render 'followform' if logged_in? %>
+    <div>
+      <%= render 'followform' if logged_in? %>
+    </div>
+    <h2>Followed by:</h2>
+    <% if @followers.any? %>
+      <% @followers.each do |follower| %>
+        <p><%= follower.fullname %></p>
+      <% end %>
+      <% else %>
+      <p>No followers yet!</p>
+      <% end %>
   </div>
 </div>
 

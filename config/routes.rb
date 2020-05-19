@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post    '/login',    to: 'sessions#create'
   delete  '/logout',   to: 'sessions#destroy'
   get     '/signup',   to: 'users#new'
-  root    'sessions#new'
+  root    'static_pages#home'
 
   resources :users do
     member do
@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     end
   end
   resources :followings,       only: [:create, :destroy]
+  resources :thoughts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
