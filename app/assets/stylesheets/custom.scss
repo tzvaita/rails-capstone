@@ -3,7 +3,6 @@
 
 #logo {
   float: left;
-  margin-right: 10px;
   font-size: 1.7em;
   color: white;
   text-transform: uppercase;
@@ -25,12 +24,101 @@ html,body {
   height: 100%;
 }
 
-.show3 {
-  background-color: #f7f7f9;
+.text {
+  color: grey;
 }
 
 .topics {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
+}
+
+.bgrn {
+  background-color: rgb(7, 1, 29);
+  height: 100vh;
+}
+
+.back {
+  background-color: rgb(225,232,237);
+  height: 100vh;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navigate {
+  background-color: rgb(29,161,242);
+}
+
+.navbuttons p {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.showmid {
+  border-right: solid 2px rgb(167, 164, 164);
+}
+
+.thotstab {
+  margin: 2px;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.thots-cont{
+  background-color: rgb(255, 255, 255);
+  margin-left: 25px;
+  border: 1px thin gray;
+}
+
+.each-thot{
+  margin: 4px;
+}
+
+.avatarholder{
+  width: 10%;
+  float: left;
+}
+
+.name-content {
+  width: 90%;
+  margin-left: 5px;
+}
+
+.name-content h3 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.name-content p {
+  font-size: 13px;
+}
+
+.pic {
+  margin: 16px;
+}
+
+.edit-button {
+  margin-top: 15px;
+}
+
+.stat {
+  border: solid 1px rgb(97, 93, 93);
+  padding: 5px;
+}
+
+.statis {
+  margin-top: 20px;
+}
+
+#follow_form {
+  margin: 10px;
+}
+
+.form-cont {
+  margin: 0px 15px 0px 15px;
 }

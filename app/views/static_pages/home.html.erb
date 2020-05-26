@@ -1,30 +1,41 @@
-  <div class="row">
-    <div class="col-lg-3 bg-warning">
-      <%= render 'shared/aside' %>
-    </div>
-    <div class="col-lg-6 bg-info">
-      <h1 class="topics"> Thoughts </h1>
-      <%= render 'shared/thought_form'%>
-
-      <% @thoughts.each do |thot| %>
-        <h1>
-          <%= avatar_for thot.author %>
-        </h1>
-        <p><%= thot.author.username %> wrote: </p>
-        <p class="text-white"><%= thot.text %></p>
-      <% end %>
-    </div>
-    <div class="col-lg-3 show3">
-    <h2 class="topics">Who to follow</h2>
-    
-      <% @users.each do |user| %>
-          <% if user != current_user && !following?(user) %>
-            <h3>
-              <%= avatar_for user %>
-              <%=link_to user.fullname, user %>
-            </h3>
+<div class="row">
+  <div class="col-lg-2 bgrn">
+    <%= render 'shared/aside' %>
+  </div>
+  <div class="col-lg-10 back">
+    <div class="fil">
+    <%= render 'layouts/header'%>
+    <div class="row">
+      <div class="col-lg-8 showmid">
+        <div class="form-cont">
+          <h1 class="topics"> Thoughts by me and those I follow </h1>
+          <%= render 'shared/thought_form'%>
+        </div>
+        <div class="thots-cont">
+          <% @thoughts.each do |thot| %>
+            <div class="each-thot">
+              <div class="avatarholder">
+                <%= avatar_for thot.author %>
+              </div>
+              <div class="name-content">
+                <h3><%= link_to thot.author.username, thot.author %> wrote: </h3>
+                <p class="text"><%= thot.text %></p>
+              </div>
+            </div>
           <% end %>
-      <% end %>
+        </div>
+      </div>
+      <div class="col-lg-4 show3">
+        <h2 class="topics">Who to follow</h2>
+        <% @users.each do |user| %>
+            <% if user != current_user && !following?(user) %>
+              <h3>
+                <%= avatar_for user %>
+                <%=link_to user.fullname, user %>
+              </h3>
+            <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
