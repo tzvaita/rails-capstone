@@ -1,0 +1,9 @@
+<h2 class="topics">Who to follow</h2>
+<% @users.each do |user| %>
+    <% if user != current_user && !following?(user) %>
+      <h3>
+        <%= avatar_for user %>
+        <%=link_to user.fullname, user %>
+      </h3>
+    <% end %>
+<% end %>
