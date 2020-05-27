@@ -1,0 +1,5 @@
+<% if @user.coverimage? %>
+  <%= image_tag(@user.coverimage_url.to_s, alt: "Rails logo", width: "100%", height: "200") %>
+<% else %>
+  <h1>Cover pic here. Edit your profile to add one.</h1>
+<% end %>

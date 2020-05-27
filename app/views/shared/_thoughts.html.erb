@@ -1,0 +1,13 @@
+<% @thoughts.each do |thot| %>
+  <div class="each-thot">
+    <div class="avatarholder">
+      <%= avatar_for @user %>
+    </div>
+    <div class="name-content">
+      <h3>
+        <%= link_to @user.fullname, @user %>
+      </h3>
+      <p><%= thot.text %></p>
+    </div>
+  </div>
+<% end %>

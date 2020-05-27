@@ -1,0 +1,14 @@
+<% if @followers.any? %>
+  <% @followers.each do |follower| %>
+  <div class="row">
+    <div class="col-lg-1">
+      <%= avatar_for(follower)%>
+    </div>
+    <div class="col-lg-11">
+      <p><%= link_to follower.fullname, follower %></p>
+    </div>
+  </div>
+  <% end %>
+<% else %>
+  <p>No followers yet!</p>
+<% end %>

@@ -1,0 +1,5 @@
+<% if @user.photo? %>
+  <%= image_tag @user.photo_url(:thumb).to_s %>
+<% else %>
+  <h1>Profile pic here. Edit profile to add a picture</h1>
+<% end %>

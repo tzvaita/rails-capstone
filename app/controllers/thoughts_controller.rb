@@ -6,7 +6,7 @@ class ThoughtsController < ApplicationController
     @thought = current_user.thoughts.build(thought_params)
     if @thought.save
       flash[:success] = "Thought created!"
-      redirect_to root_url
+      redirect_to home_url
     else
       render 'static_pages/home'
     end
