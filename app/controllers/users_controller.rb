@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to the App!"
-      redirect_to @user
+      redirect_to home_path
     else
       flash[:errors] = @user.errors.full_messages
       render 'new'
