@@ -13,6 +13,7 @@
         </div>
         <div class="thots-cont">
           <% @thoughts.each do |thot| %>
+            <% if following?(thot.author) || (thot.author == current_user) %>
             <div class="each-thot">
               <div class="avatarholder">
                 <%= avatar_for thot.author %>
@@ -22,6 +23,7 @@
                 <p class="text"><%= thot.text %></p>
               </div>
             </div>
+            <% end %>
           <% end %>
         </div>
       </div>
