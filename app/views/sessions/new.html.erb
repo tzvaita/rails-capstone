@@ -1,8 +1,11 @@
+<h2>Log in form</h2>
+<div class="forms">
 <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
   <%= f.label :username %>
-  <%= f.text_field :username %>
+  <%= f.text_field :username, class: 'form-control' %>
 
-  <%= f.submit 'Log in' %>
+  <%= f.submit 'Log in', class: 'btn btn-primary' %>
 <% end %>
 
-<p>New user? <%= link_to 'Sign up now', signup_path %></p>
+<p>New user? <%= link_to 'Sign up now', signup_path, class: 'btn btn-primary'  %></p>
+</div>

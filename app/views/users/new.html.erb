@@ -1,10 +1,16 @@
+<h2>Sign up form</h2>
+<div class="forms">
 <%= form_with(model: @user, local: true) do |f| %>
   <%= f.label :fullname %>
-  <%= f.text_field :fullname %>
+  <%= f.text_field :fullname, class: 'form-control' %>
 
   <%= f.label :username %>
-  <%= f.text_field :username %>
+  <%= f.text_field :username, class: 'form-control' %>
 
-  <%= f.submit 'Create my account' %>
+  <%= f.submit 'Create my account', class: 'btn btn-primary' %>
 
 <% end %>
+<div class="loginn">
+<%= link_to 'Login', login_path, class: 'btn btn-primary' %>
+</div>
+</div>
