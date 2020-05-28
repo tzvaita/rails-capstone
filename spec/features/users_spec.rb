@@ -27,5 +27,4 @@ RSpec.feature "Users", type: :feature do
     click_on 'Unfollow'
     expect(page).to have_button 'Follow'
   end
-
 end

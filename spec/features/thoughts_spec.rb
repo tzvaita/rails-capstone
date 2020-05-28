@@ -13,7 +13,7 @@ RSpec.feature "Thoughts", type: :feature do
 
   scenario 'create a thought' do
     within('form') do
-    fill_in 'Text', with: 'First thought'
+      fill_in 'Text', with: 'First thought'
     end
     click_button 'Post'
     expect(page).to have_text 'Thought created!'
