@@ -12,19 +12,7 @@
           <%= render 'shared/thought_form'%>
         </div>
         <div class="thots-cont">
-          <% @thoughts.each do |thot| %>
-            <% if following?(thot.author) || (thot.author == current_user) %>
-            <div class="each-thot">
-              <div class="avatarholder">
-                <%= avatar_for thot.author %>
-              </div>
-              <div class="name-content">
-                <h3><%= link_to thot.author.username, thot.author %> wrote: </h3>
-                <p class="text"><%= thot.text %></p>
-              </div>
-            </div>
-            <% end %>
-          <% end %>
+          <%= render 'shared/followingthots' %>
         </div>
       </div>
       <div class="col-lg-4 show3">
