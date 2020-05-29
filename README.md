@@ -11,6 +11,10 @@ This is the repository for the ruby on rails capstone project for microverse cur
 
 https://damp-lake-87370.herokuapp.com/
 
+## Project showcase video
+
+https://www.loom.com/share/725e82a2848f4016ba04875577b89d76
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
