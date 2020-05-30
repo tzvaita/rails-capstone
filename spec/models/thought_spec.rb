@@ -27,5 +27,10 @@ RSpec.describe Thought, type: :model do
       @thought.text = "a" * 141
       expect(@thought).not_to be_valid
     end
+
+    it 'does not save an empty thought' do
+      @thought.text = "  "
+      expect(@thought).not_to be_valid
+    end
   end
 end

@@ -8,7 +8,8 @@ class ThoughtsController < ApplicationController
       flash[:success] = "Thought created!"
       redirect_to home_url
     else
-      render 'static_pages/home'
+      flash[:danger] = "Thought cannot be empty"
+      redirect_to home_url
     end
   end
 

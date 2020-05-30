@@ -18,4 +18,12 @@ RSpec.feature "Thoughts", type: :feature do
     click_button 'Post'
     expect(page).to have_text 'Thought created!'
   end
+
+  scenario 'create a thought with empty input' do
+    within('form') do
+      fill_in 'Text', with: ''
+    end
+    click_button 'Post'
+    expect(page).to have_text 'Thought cannot be empty'
+  end
 end
