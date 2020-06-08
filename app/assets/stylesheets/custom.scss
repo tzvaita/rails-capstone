@@ -17,17 +17,17 @@
 
 body{
   overflow-x:hidden;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,body {
+  height: 100vh;
+}
+
+.mains {
+  max-width:1400px;
   height: 100%;
+  overflow: hidden;
 }
-
-.text {
-  color: grey;
-}
-
 .topics {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -36,11 +36,11 @@ html,body {
 
 .bgrn {
   background-color: rgb(7, 1, 29);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .back {
-  background-color: rgb(225,232,237);
+  background-color: #ece9e9;
   height: 100vh;
   padding-left: 0px;
   padding-right: 0px;
@@ -50,34 +50,16 @@ html,body {
   background-color: rgb(29,161,242);
 }
 
-.navbuttons p {
+.navbuttons a {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
+  color: rgb(170,184,194);
   padding: 8px;
 }
 
 .showmid {
   border-right: solid 2px rgb(167, 164, 164);
-}
-
-.avatarholder{
-  width: 10%;
-  float: left;
-}
-
-.name-content {
-  width: 90%;
-  margin-left: 5px;
-}
-
-.name-content h3 {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.name-content p {
-  font-size: 13px;
 }
 
 .pic {
@@ -89,5 +71,17 @@ html,body {
 }
 
 .forms {
-  width: 40%;
+  margin-top: 10px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
 }

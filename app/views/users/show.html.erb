@@ -1,21 +1,44 @@
-<div class="row">
-  <div class="col-lg-2 bgrn">
-    <%= render 'shared/aside' %>
-  </div>
-  <div class="col-lg-10 back">
-    <div class="fil">
-      <%= render 'layouts/header' %>      
-      <div class="row">
-        <div class="col-lg-8 showmid">
-          <%= render 'shared/cover'%>
-          <div class="thotstab">
-            Thoughts
-          </div>
-          <div class="thots-cont">
-            <%= render 'shared/thoughts'%>
+<div class="w3-container w3-content mains">
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m2 bgrn">
+<!-- Profile -->
+      <div class="w3-card w3-round">
+        <div class="w3-container">
+          <%= render 'shared/aside' %>
+        </div>
+      </div>
+    <!-- End Left Column -->
+    </div>
+    
+    <div class="w3-col m10 back">
+      <div><%= render 'layouts/header' %></div>
+      <!-- Middle Column -->
+      <div class="w3-col m9 middle">
+      
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+              <div>
+              <%= render 'shared/cover'%>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4 show3">
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin middle-bottom"><br>
+          <h4>Recently posted</h4><br>
+          <hr class="w3-clear">
+          <%= render 'shared/thoughts' %>
+        </div>
+        
+      <!-- End Middle Column -->
+      </div>
+      
+      <!-- Right Column -->
+      <div class="w3-col m3 right">
+        <div class="w3-card w3-round w3-center">
           <div class="profile">
             <div class="profile-pic">
               <div class="pic">
@@ -32,12 +55,19 @@
               <%= render 'followform' %>
             </div>
           </div>
-          <div class="container">
-            <h2>Followed by:</h2>
+          <div class="w3-container w3-margin-top">
+            <div class="headingg">
+            <h4>Followed by:</h4>
+            </div><br>
             <%= render 'shared/followedby'%>
           </div>
         </div>
+
+      <!-- End Right Column -->
       </div>
     </div>
+  <!-- End Grid -->
   </div>
+  
+<!-- End Page Container -->
 </div>

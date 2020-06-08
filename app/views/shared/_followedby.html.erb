@@ -1,14 +1,19 @@
 <% if @followers.any? %>
   <% @followers.each do |follower| %>
-  <div class="row">
-    <div class="col-lg-1">
-      <%= avatar_for(follower)%>
-    </div>
-    <div class="col-lg-11">
-      <p><%= link_to follower.fullname, follower %></p>
-    </div>
+  <div class="con">
+  <div class="ava w3-circle">
+  <% if follower.photo? %>
+    <%= avatar_for(follower) %>
+  <% else %>
+  <%= image_tag("https://image.flaticon.com/icons/svg/1/1247.svg") %>
+  <% end %>
   </div>
+  <div class="namez">
+    <%=link_to follower.fullname, follower %>
+  </div>
+</div>
   <% end %>
 <% else %>
   <p>No followers yet!</p>
 <% end %>
+

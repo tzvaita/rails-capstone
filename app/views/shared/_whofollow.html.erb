@@ -1,9 +1,16 @@
-<h2 class="topics">Who to follow</h2>
 <% @users.each do |user| %>
     <% if user != current_user && !following?(user) %>
-      <h3>
-        <%= avatar_for user %>
-        <%=link_to user.fullname, user %>
-      </h3>
+      <div class="con">
+        <div class="ava w3-circle">
+        <% if user.photo? %>
+          <%= avatar_for user %>
+        <% else %>
+        <%= image_tag("https://image.flaticon.com/icons/svg/1/1247.svg") %>
+        <% end %>
+        </div>
+        <div class="namez">
+          <%=link_to user.fullname, user %>
+        </div>
+      </div>
     <% end %>
 <% end %>

@@ -8,6 +8,10 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'https://www.w3schools.com/w3css/4/w3.css'%>
+    <%= stylesheet_link_tag 'application', 'https://www.w3schools.com/lib/w3-theme-blue-grey.css'%>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Open+Sans'%>
+        <%= stylesheet_link_tag 'application', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'%>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
   </head>
@@ -18,11 +22,6 @@
       <% end %>
       <div class="container-fluid">
         <%= yield %>
-      </div>
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <%= render 'layouts/footer' %>
-        </div>
-      </div>   
+      </div> 
   </body>
 </html>
