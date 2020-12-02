@@ -1,0 +1,5 @@
+<% if @user.coverimage? %>
+  <%= image_tag(@user.coverimage_url.to_s, alt: "Rails logo", width: "100%", height: "200") %>
+<% else %>
+  <%= image_tag("https://mindsetdigital.com/wp-content/uploads/2017/07/placeholder-image5-1024x576.jpg", width: "100%", height: "200") %>
+<% end %>

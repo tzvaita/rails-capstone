@@ -1,0 +1,11 @@
+<% @users.each do |user| %>
+  <div class="row">
+    <div class="col-lg-1">
+      <%= avatar_for(user)%>
+    </div>
+    <div class="col-lg-11">
+      <p><%=link_to user.fullname, user %></p>
+    </div>
+  </div>
+
+<% end %>

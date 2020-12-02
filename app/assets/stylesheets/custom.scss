@@ -1,0 +1,87 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+body{
+  overflow-x:hidden;
+}
+
+html,body {
+  height: 100vh;
+}
+
+.mains {
+  max-width:1400px;
+  height: 100%;
+  overflow: hidden;
+}
+.topics {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bgrn {
+  background-color: rgb(7, 1, 29);
+  min-height: 100vh;
+}
+
+.back {
+  background-color: #ece9e9;
+  height: 100vh;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navigate {
+  background-color: rgb(29,161,242);
+}
+
+.navbuttons a {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(170,184,194);
+  padding: 8px;
+}
+
+.showmid {
+  border-right: solid 2px rgb(167, 164, 164);
+}
+
+.pic {
+  margin: 16px;
+}
+
+.edit-button {
+  margin-top: 15px;
+}
+
+.forms {
+  margin-top: 10px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}

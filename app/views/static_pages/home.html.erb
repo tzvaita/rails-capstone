@@ -1,0 +1,57 @@
+<div class="w3-container w3-content mains">
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m2 bgrn">
+<!-- Profile -->
+      <div class="w3-card w3-round">
+        <div class="w3-container">
+          <%= render 'shared/aside' %>
+        </div>
+      </div>
+    <!-- End Left Column -->
+    </div>
+    
+    <div class="w3-col m10 back">
+      <div><%= render 'layouts/header' %></div>
+      <!-- Middle Column -->
+      <div class="w3-col m9 middle">
+      
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+              <div class="w3-container w3-padding">
+              <%= render 'shared/thought_form'%>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin middle-bot"><br>
+          <h4>Recently posted</h4><br>
+          <hr class="w3-clear">
+          <%= render 'shared/followingthots' %>
+        </div>
+        
+      <!-- End Middle Column -->
+      </div>
+      
+      <!-- Right Column -->
+      <div class="w3-col m3 right">
+        <div class="w3-card w3-round w3-center">
+          <div class="w3-container">
+            <div class="headingg">
+            <h4>WHO TO FOLLOW</h4>
+            </div><br>
+            <%= render 'shared/whofollow' %>
+          </div>
+        </div>
+
+      <!-- End Right Column -->
+      </div>
+    </div>
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
